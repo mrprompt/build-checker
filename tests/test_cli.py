@@ -12,4 +12,4 @@ def test_cli_with_all_params():
     result = runner.invoke(cli, [repository, token])
 
     assert result.exit_code == 0
-    assert result.output.rstrip() in ["canceled", "created", "queued", "started", "passed", "failed", "errored", "ready", "green", "yellow", "red"]
+    assert result.output == "passed\n"
