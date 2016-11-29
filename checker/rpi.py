@@ -1,9 +1,9 @@
-#!/usr/bin/env python
-#-*- coding: UTF-8 -*-
 import RPi.GPIO as GPIO
 import time
+import checker.cli as checker
 
-# LEDs GPIO port: 11 = Green, 13 = Gray, 16 = Red
+
+# LEDs GPIO port: 11 = Green, 13 = White, 16 = Red
 pins = [11, 13, 16]
 delay = 30
 
@@ -12,7 +12,7 @@ GPIO.setup(pins, GPIO.OUT)
 
 try:
     while True:
-        build = travis.check()
+        build = checker.cli()
 
         if build == 'failed':
             pin = pins[2]

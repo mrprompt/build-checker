@@ -1,15 +1,16 @@
 import os
 from click.testing import CliRunner
-from checker.cli import cli
+from checker.rpi import rpi
 
 
-def test_cli():
+@pytest.mark.skip(reason="only works on real raspberry")
+def test_rpi():
     runner = CliRunner()
 
     repository = os.environ.get('GITHUB_REPOSITORY')
     token = os.environ.get('GITHUB_TOKEN')
 
-    result = runner.invoke(cli, [repository, token])
+    result = runner.invoke(rpi, [repository, token])
 
     assert result.exit_code == 0
     assert result.output == "passed\n"

@@ -15,6 +15,12 @@ cd raspberry-build-checker
 pip install -e .[test]
 ```
 
+## LEDs GPIO 
+
+* 11 = Green - Success
+* 13 = White - Running
+* 16 = Red - Error
+
 ## Uso
 
 Com varíaveis de ambiente
