@@ -34,6 +34,25 @@ Com argumentos
 checker "<github-repository-slug>" "<github-access-token>" 
 ```
 
+## Raspberry Pi
+
+Com varíaveis de ambiente
+```
+GITHUB_REPOSITORY="<github-repository-slug>" GITHUB_TOKEN="<github-access-token>" rpi-checker 
+```
+
+Com argumentos
+
+```
+rpi-checker "<github-repository-slug>" "<github-access-token>" 
+```
+
+## Testes
+
+```
+py.test
+```
+
 ## License
 
 MIT
