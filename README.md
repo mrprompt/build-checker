@@ -7,6 +7,20 @@
 
 A build checker based on LEDs to Raspberry Pi.
 
+## Instalação
+
+.. code-block:: console
+
+    git clone https://github.com/mrprompt/raspberry-build-checker
+    cd raspberry-build-checker
+    pip install -e .[test]
+
+## Uso
+
+.. code-block:: console
+
+    GITHUB_REPOSITORY="<github-repository-slug>" GITHUB_TOKEN="<github-access-token>" checker 
+
 ## License
 
 MIT
