@@ -3,7 +3,6 @@ from click.testing import CliRunner
 from checker.rpi import rpi
 
 
-@pytest.mark.skip(reason="only works on real raspberry")
 def test_rpi():
     runner = CliRunner()
 

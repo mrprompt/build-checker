@@ -7,7 +7,7 @@ install:
   - "pip install pytest-cov"
   - "pip install -e .[test]"
 script: 
-  - py.test --cov=checker tests/
+  - py.test --cov=checker --ignore=tests/test_rpi.py tests/
 after_success:
   - codeclimate-test-reporter
 sudo: false

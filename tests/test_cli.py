@@ -3,7 +3,7 @@ from click.testing import CliRunner
 from checker.cli import cli
 
 
-def test_cli():
+def test_cli_with_all_params():
     runner = CliRunner()
 
     repository = os.environ.get('GITHUB_REPOSITORY')
@@ -12,4 +12,4 @@ def test_cli():
     result = runner.invoke(cli, [repository, token])
 
     assert result.exit_code == 0
-    assert result.output == "passed\n"
+    assert result.output.rstrip() in ["canceled", "created", "queued", "started", "passed", "failed", "errored", "ready", "green", "yellow", "red"]
