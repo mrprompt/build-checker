@@ -10,8 +10,8 @@ delay = 30
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pins, GPIO.OUT)
 
-try:
-    while True:
+while True:
+    try:
         build = checker.cli()
 
         if build == 'failed':
@@ -28,11 +28,11 @@ try:
 
         time.sleep(delay)
 
-except KeyboardInterrupt:
-    print("A keyboard interrupt has been noticed")
+    except KeyboardInterrupt:
+        print("A keyboard interrupt has been noticed")
 
-except Exception as e:
-    print("An error or exception has ocurred: " + str(e))
+    except Exception as e:
+        print("An error or exception has ocurred: " + str(e))
 
-finally:
-    GPIO.cleanup()
+    finally:
+        GPIO.cleanup()
