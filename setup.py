@@ -28,6 +28,5 @@ setup(name='checker',
       entry_points="""
       [console_scripts]
       checker=checker.cli:cli
-      rpi-checker=checker.rpi:rpi
       """
       )
