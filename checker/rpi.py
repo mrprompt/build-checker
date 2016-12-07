@@ -12,7 +12,7 @@ GPIO.setup(pins, GPIO.OUT)
 
 try:
     while True:
-        build = checker()
+        build = checker.cli()
 
         if build == 'failed':
             pin = pins[2]
