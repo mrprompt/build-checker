@@ -21,4 +21,4 @@ def test_withou_token():
 def test_without_parameters():
     result = cli.cli()
 
-    assert result in ["[403] not a Travis user", "[403 Forbidden"]
+    assert result in ["[403] not a Travis user", "[403] Forbidden"]

@@ -12,4 +12,5 @@ def test_rpi():
 
     result = runner.invoke(cli, [repository, token])
 
-    assert result.exit_code == 0
+    assert result.exit_code == -1
+
