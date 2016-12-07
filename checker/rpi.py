@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import time
-import checker.cli as checker
+import os
+import checker.travis as checker
 
 
 # LEDs GPIO port: 11 = Green, 13 = White, 16 = Red
@@ -10,9 +11,14 @@ delay = 30
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pins, GPIO.OUT)
 
+project = os.environ['GITHUB_REPOSITORY']
+token = os.environ['GITHUB_TOKEN']
+
 while True:
+    print(".")
+
     try:
-        build = checker.cli()
+        build = checker.cli(project, token)
 
         if build == 'failed':
             pin = pins[2]
