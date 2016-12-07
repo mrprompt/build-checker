@@ -1,7 +1,7 @@
 import os
 import checker.rpi as cli
-
 from click.testing import CliRunner
+
 
 def test_rpi():
     runner = CliRunner()
