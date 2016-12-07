@@ -1,6 +1,5 @@
 import os
-
-from checker.cli import cli
+import checker.rpi as cli
 
 from click.testing import CliRunner
 
