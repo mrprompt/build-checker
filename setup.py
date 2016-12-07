@@ -7,7 +7,7 @@ with codecs_open('README.md', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='checker',
-      version='0.0.1',
+      version='0.1.0',
       description=u"Raspberry Pi Build Checker",
       long_description=long_description,
       classifiers=[],
@@ -27,6 +27,6 @@ setup(name='checker',
       },
       entry_points="""
       [console_scripts]
-      checker=checker.cli:cli
+      checker=checker.rpi
       """
       )
